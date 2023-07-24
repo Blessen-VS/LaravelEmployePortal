@@ -46,7 +46,7 @@
                             </tr>
                         </thead>
                         <?php $__currentLoopData = $Listing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $List): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tbody onClick="document.location.href='/<?php echo e($List['id']); ?>'" class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                        <tbody onClick="document.location.href='/listing/<?php echo e($List['id']); ?>'" class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                             <tr>
                             <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
