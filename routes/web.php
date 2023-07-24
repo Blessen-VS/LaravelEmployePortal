@@ -22,3 +22,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/listing/{listing}', function () {
+    return view('listing',[
+        'heading' => 'Latest Listings',
+        'Listing' => Listing::all()
+    ]);
+});
+
