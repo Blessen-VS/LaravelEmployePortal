@@ -24,10 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/listing/{listing}', function () {
-    return view('listing',[
+Route::get('/listing/{listing}', function ($listing) {
+    return view('listbyId',[
         'heading' => 'Latest Listings',
-        'Listing' => Listing::all()
+        'Listing' => Listing::find($listing)
     ]);
 });
 

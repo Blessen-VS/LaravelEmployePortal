@@ -1,12 +1,10 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 <main>
 <header class="bg-white shadow">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}} </h1>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900"><?php echo e($heading); ?> </h1>
     </div>
   </header>
   <section class="container px-4 mx-auto">
@@ -47,33 +45,36 @@
                                 </th>
                             </tr>
                         </thead>
-                        @foreach ($Listing as $List)
+
                         <tbody  class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                            <tr onClick="document.location.href='/listing/{{$List['id']}}'">
+                            <tr onClick="document.location.href='/listing/<?php echo e($Listing['id']); ?>'">
 
                             <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                   {{$List['title']}}
+                                   <?php echo e($Listing['title']); ?>
+
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['company']}}
+                                    <?php echo e($Listing['company']); ?>
+
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['location']}}
+                                    <?php echo e($Listing['location']); ?>
+
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['email'] }}
+                                    <?php echo e($Listing['email']); ?>
+
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
-                        @endforeach
                     </table>
                 </div>
             </div>
@@ -81,5 +82,7 @@
     </div>
 </section>
   </main>
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\LaravelEmployePortal\resources\views/listbyId.blade.php ENDPATH**/ ?>

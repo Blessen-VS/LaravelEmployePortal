@@ -47,33 +47,32 @@
                                 </th>
                             </tr>
                         </thead>
-                        @foreach ($Listing as $List)
+
                         <tbody  class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                            <tr onClick="document.location.href='/listing/{{$List['id']}}'">
+                            <tr onClick="document.location.href='/listing/{{$Listing['id']}}'">
 
                             <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                   {{$List['title']}}
+                                   {{$Listing['title']}}
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['company']}}
+                                    {{$Listing['company']}}
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['location']}}
+                                    {{$Listing['location']}}
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap text-emerald-500">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                    {{$List['email'] }}
+                                    {{$Listing['email'] }}
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
-                        @endforeach
                     </table>
                 </div>
             </div>
