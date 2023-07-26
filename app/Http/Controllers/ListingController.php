@@ -16,6 +16,14 @@ class ListingController extends Controller
 
     }
 
+
+
+    public function create(){
+        return view('listing.create');
+    }
+
+
+
     public function show(Listing $listing){
         return view('listing.show',[
             'heading' => 'Latest Listings',
