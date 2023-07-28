@@ -13,7 +13,7 @@ class ListingController extends Controller
     public function index(){
         return view('listing.index',[
             'heading' => 'Latest Listings',
-            'Listing' => Listing::all()
+            'Listing' => Listing::latest()->get()
         ]);
 
     }
@@ -41,7 +41,28 @@ class ListingController extends Controller
 
         User::create($formFields);
 
-        return redirect('/')->with('message', 'User created successfully');
+        return redirect('/')->with('message', 'Gig has been updated successfully');
+
+    }
+
+    public function edit(Listing $listing ){
+      return view('listing.edit', ['Indviduallisitng'=> Listing::find($listing)]);
+    }
+
+
+    public function update(Request $request, Listing $listing){
+        $formFields = $request->validate([
+            'title' => 'required',
+            'company' => 'required',
+            'email' => 'required',
+            'location' => 'required',
+            'website' => 'required',
+            'description' => 'required',
+        ]);
+
+        $listing->create($formFields);
+
+        return redirect('/')->with('message', 'Company details created successfully');
 
     }
 
