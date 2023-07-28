@@ -41,7 +41,7 @@ class ListingController extends Controller
 
         User::create($formFields);
 
-        return redirect('/')->with('message', 'Gig has been updated successfully');
+        return redirect('/')->with('message', 'Company has been updated successfully');
 
     }
 
