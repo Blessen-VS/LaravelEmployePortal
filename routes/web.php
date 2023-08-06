@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ListingController;
+use App\Http\Controllers\EmployeeController;
 use illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Models\employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,16 +18,18 @@ use App\Models\Listing;
 
 ;
 
-Route::get('/', [ListingController::class,'index']);
+Route::resource('/', 'EmployeeController');
 
-Route::get('/listing/create', [ListingController::class,'create']);
+//Route::get('/', [ListingController::class,'index']);
 
-Route::post('/listing', [ListingController::class,'store']);
+// Route::get('/listing/create', [ListingController::class,'create']);
 
-Route::get('/listing/{listing}/edit', [ListingController::class,'edit']);
+// Route::post('/listing', [ListingController::class,'store']);
 
-Route::put('/listing/{listing}', [ListingController::class,'update']);
+// Route::get('/listing/{listing}/edit', [ListingController::class,'edit']);
+
+// Route::put('/listing/{listing}', [ListingController::class,'update']);
 
 
-Route::get('/listing/{listing}', [ListingController::class,'show']);
+// Route::get('/listing/{listing}', [ListingController::class,'show']);
 
